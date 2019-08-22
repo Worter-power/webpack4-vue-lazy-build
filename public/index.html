@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="/common/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/common/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="/common/lib/theme-chalk/index.css" />
+    <link rel="stylesheet" href="/common/css/lib/default.css" />
+    <title>webpack vue</title>
+    <% if (process.env.NODE_ENV == 'development') { %>
+        <script type="text/javascript">
+            var dev = window.localStorage.getItem('currentHost') || 'http://10.0.0.221:18900';
+            window.ShiYue = {
+                base: dev,
+                uploadBaseURL: dev,
+                showRcBaseURL: dev,
+                ysy: 'http://demo.yishengya.cn/authentication/index',
+                pageSize: 30,
+                notAllowUpload: ['jspx', 'jsp', 'exe']
+            }
+        </script>
+    <% } %>
+    <% if (process.env.NODE_ENV == 'production') { %>
+        <script type="text/javascript" src="/common/js/sy-config.js"></script>
+        <script src="/common/plugins/polyfill/6.26.0/polyfill.min.js"></script>
+    <% } %>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/javascript" src="/common/js/user-agent-4.1.1.js"></script>
+    <script type="text/javascript" src="/common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/common/js/jquery.ztree.all.min.js"></script>
+    <script type="text/javascript" src="/common/js/jquery.transit.js"></script>
+    <script type="text/javascript" src="/common/js/moment.min.js"></script>
+    <script type="text/javascript" src="/common/js/lodash.min.js"></script>
+    <script type="text/javascript" src="/common/js/echarts.min.js"></script>
+    <script type="text/javascript" src="/common/js/screenfull.min.js"></script>
+</body>
+
+</html>
