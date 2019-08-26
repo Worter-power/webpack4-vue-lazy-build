@@ -12,14 +12,14 @@ module.exports = {
     ],
     proxy: {
         "/api": {
-            "target": "http://10.0.0.221:18900",
+            "target": "http://1.shiyuesoft.com",
             "changeOrigin": true,
             "pathRewrite": {
                 "^/api": "/api"
             }
         },
         "/common": {
-            "target": "http://1.shiyuesoft.com",
+            "target": "http://localhost:80",
             "changeOrigin": true,
             "pathRewrite": {
                 "^/common": "/common"

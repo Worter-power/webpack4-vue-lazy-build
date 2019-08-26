@@ -1,7 +1,5 @@
 
 
-import VueRouter from 'vue-router';
-
 const Index  = () => import('../components/Index.vue');
 const Hello = () => import( '../components/Hello.vue');
 const List = () => import( '../components/List.vue');

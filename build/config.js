@@ -63,12 +63,11 @@ exports.alias = {
 };
 // 忽略打包的node插件
 exports.externals = {
-    // vue: 'Vue',
-    // vuex: 'Vuex',
-    // qs: 'Qs',
-    // axios: 'axios',
-    // 'vue-router': 'VueRouter',
-
+    vue: 'Vue',
+    vuex: 'Vuex',
+    qs: 'Qs',
+    axios: 'axios',
+    'vue-router': 'VueRouter',
     jquery: 'window.jQuery',
     moment: 'moment',
     lodash: '_',

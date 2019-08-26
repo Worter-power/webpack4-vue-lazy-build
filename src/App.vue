@@ -1,30 +1,25 @@
 <template>
-  <div class="wrapper">
-    <ul>
-      <li><router-link to="/index">Index</router-link></li>
-      <li><router-link to="/hello">Hello</router-link></li>
-      <li><router-link to="/list">List</router-link></li>
-    </ul>
-    <router-view></router-view>
-  </div>  
+    <div class="sy-home-body" id="container">
+        <h1>{{title}}</h1>
+        <router-view></router-view>
+    </div>  
 </template>
 
 <script>
-  import Vue from 'vue';
-  import VueRouter from 'vue-router';
-  export default {
+export default {
     data() {
-      return {
-        'title': 'Hello World!'
-      }
+        return {
+            'title': 'Hello World!'
+        }
+    },
+    created(){
+        BUS.$on('title-click', (title)=>{
+            this.$notify({
+                title: '信息',
+                message: '标题点击事件触发',
+                type: "info"
+            });
+        })
     }
-  }
+}
 </script>
-
-<style scoped>
-  h1 {
-    color: #ffffff;
-  }
-  .wrapper {
-  }
-</style>

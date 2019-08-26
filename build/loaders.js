@@ -2,6 +2,7 @@ const path = require('path');
 const postcss = require('./postcss.config');
 const isProd = process.env.NODE_ENV == 'production';
 const jsexclude = /node_modules/;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = [
     {
         test: /\.json$/,  //用于匹配loaders所处理文件拓展名的正则表达式
@@ -67,7 +68,7 @@ module.exports = [
         test: /\.css$/,
         exclude: jsexclude,
         use: [
-            { loader: "style-loader" },
+            { loader: isProd ? MiniCssExtractPlugin.loader : "style-loader" },
             { loader: 'css-loader' },
             {
                 loader: 'postcss-loader',
@@ -82,7 +83,7 @@ module.exports = [
         test: /\.scss$/,
         exclude: jsexclude,
         use: [
-            { loader: "style-loader" },
+            { loader: isProd ? MiniCssExtractPlugin.loader : "style-loader" },
             { loader: "css-loader" },
             { loader: "sass-loader", options: { sourceMap: isProd ? false : true } },
             {

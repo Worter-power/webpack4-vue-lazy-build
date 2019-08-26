@@ -15,7 +15,7 @@
         <script type="text/javascript">
             var dev = window.localStorage.getItem('currentHost') || 'http://10.0.0.221:18900';
             window.ShiYue = {
-                base: dev,
+                base: '',
                 uploadBaseURL: dev,
                 showRcBaseURL: dev,
                 ysy: 'http://demo.yishengya.cn/authentication/index',
@@ -31,7 +31,16 @@
 </head>
 
 <body>
-    <div id="app"></div>
+    <!-- 基本布局 -->
+    <div id="app">
+        <div class="sy-home-header">
+            <div id="page-header"></div>
+        </div>
+        <div class="sy-home-body" id="app-container"></div>
+        <div class="sy-home-footer" >
+            <div id="page-footer"></div>
+        </div>
+    </div>
     <script type="text/javascript" src="/common/js/user-agent-4.1.1.js"></script>
     <script type="text/javascript" src="/common/js/jquery.min.js"></script>
     <script type="text/javascript" src="/common/js/jquery.ztree.all.min.js"></script>
@@ -40,6 +49,7 @@
     <script type="text/javascript" src="/common/js/lodash.min.js"></script>
     <script type="text/javascript" src="/common/js/echarts.min.js"></script>
     <script type="text/javascript" src="/common/js/screenfull.min.js"></script>
+    <script type="text/javascript" src="/common/test/js/1.0.4/header-page-js.min.js"></script>
 </body>
 
 </html>
